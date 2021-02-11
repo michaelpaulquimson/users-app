@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "John",
+			"lastName": "Doe",
+			"email": "john.doe@gmail.com",
+			"dob": "12/02/2000"
+    },
+		{
+      "id": 2,
+      "firstName": "Albert",
+			"lastName": "Einstein",
+			"email": "albert.einstein@gmail.com",
+			"dob": "12/02/2000"
+    },
+		{
+      "id": 3,
+      "firstName": "Michael",
+			"lastName": "Quimson",
+			"email": "michael.quimson@gmail.com",
+			"dob": "12/02/2000"
+    },
+		{
+      "id": 4,
+      "firstName": "Gabriel",
+			"lastName": "Quimson",
+			"email": "gabriel.quimson@gmail.com",
+			"dob": "12/02/2000"
+    }
+  ]
+}

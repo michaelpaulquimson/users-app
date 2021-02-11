@@ -15,7 +15,9 @@
     "start": "npm run lint && react-scripts start",
     "build": "react-scripts build",
     "test": "npm run lint && react-scripts test",
-		"lint": "npx eslint src",
+		"dev": "concurrently \"npm run server\" \"npm run start\"",
+    "server": "json-server --watch db.json",
+    "lint": "npx eslint src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -37,6 +39,8 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.19.0"
+    "concurrently": "^5.3.0",
+    "eslint": "^7.19.0",
+    "json-server": "^0.16.3"
   }
 }
