@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import UsersService from '../services/UsersService';
 import UserList from '../components/UserList';
 import CreateUser from '../components/CreateUser';
+import Utils from '../utils/Utils';
 
 const Header = styled.h1`
 	margin: 25px;
@@ -29,6 +30,7 @@ function App() {
 			id: users.length + 1
 		};
 		await UsersService.createUser(userToCreate);
+		userToCreate.dob = Utils.convertToDate(userToCreate.dob);
 		setUsers([
 			...users,
 			userToCreate
@@ -39,6 +41,7 @@ function App() {
 		await UsersService.updateUser(data);
 		setUsers(users.map(u => {
 			if (u.id === data.id) {
+				data.dob = Utils.convertToDate(data.dob);
 				return data;
 			}
 			return u;
