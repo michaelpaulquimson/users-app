@@ -5,28 +5,28 @@
       "firstName": "John",
 			"lastName": "Doe",
 			"email": "john.doe@gmail.com",
-			"dob": "12/02/2000"
+			"dob": "1595493789"
     },
 		{
       "id": 2,
       "firstName": "Albert",
 			"lastName": "Einstein",
 			"email": "albert.einstein@gmail.com",
-			"dob": "12/02/2000"
+			"dob": "1595493789"
     },
 		{
       "id": 3,
       "firstName": "Michael",
 			"lastName": "Quimson",
 			"email": "michael.quimson@gmail.com",
-			"dob": "12/02/2000"
+			"dob": "1595493789"
     },
 		{
       "id": 4,
       "firstName": "Gabriel",
 			"lastName": "Quimson",
 			"email": "gabriel.quimson@gmail.com",
-			"dob": "12/02/2000"
+			"dob": "1595493789"
     }
   ]
 }
