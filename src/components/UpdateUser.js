@@ -55,7 +55,7 @@ const UpdateUser = ({ user, onUpdate }) => {
 	const [firstName, setFirstName] = useState(user.firstName);
 	const [lastName, setLastName] = useState(user.lastName);
 	const [email, setEmail] = useState(user.email);
-	const [dob, setDob] = useState(user.dob);
+	const [dob, setDob] = useState(new Date(user.dob));
 	const [modalIsOpen,setIsOpen] = React.useState(false);
 	const [errors, setErrors] = useState({});
 
@@ -113,7 +113,7 @@ const UpdateUser = ({ user, onUpdate }) => {
 		setFirstName(user.firstName);
 		setLastName(user.lastName);
 		setEmail(user.email);
-		setDob(Utils.convertToDate.dob);
+		setDob(new Date(user.dob));
 	}, []);
 
 	return (
