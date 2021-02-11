@@ -28,9 +28,9 @@ function App() {
 		const userToCreate = {
 			...user
 		};
-		const newUser = await UsersService.createUser(userToCreate);
-		userToCreate.id = newUser.id;
-		userToCreate.dob = Utils.convertToDate(newUser.dob);
+		const newUserCreated = await UsersService.createUser(userToCreate);
+		userToCreate.id = newUserCreated.id;
+		userToCreate.dob = Utils.convertToDate(newUserCreated.dob);
 		setUsers([
 			...users,
 			userToCreate
