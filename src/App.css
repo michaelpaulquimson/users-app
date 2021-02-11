@@ -6,3 +6,8 @@
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+
+h1 {
+	font-weight: bold;
+	font-size: 24px;
+}
