@@ -10,6 +10,8 @@ import Utils from '../utils/Utils';
 const Header = styled.h1`
 	margin: 25px;
 	text-align: center;
+	font-weight: bold;
+	font-size: 24px;
 `;
 
 function App() {
