@@ -12,9 +12,10 @@
     "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "npm run lint && react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "npm run lint && react-scripts test",
+		"lint": "npx eslint src",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -34,5 +35,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0"
   }
 }
