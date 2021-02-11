@@ -21,7 +21,7 @@ const UserItem = ({ user, onDelete, onUpdate }) => {
 			<Td>{lastName}</Td>
 			<Td>{email}</Td>
 			<Td>{dob}</Td>
-			<StyledTableData onClick={() => {if (window.confirm('Are you sure you wish to delete this item?')) onDelete(id);}}>Delete</StyledTableData>
+			<StyledTableData onClick={() => {if (window.confirm('Are you sure you wish to delete this item?')) onDelete(id);}}>Delete User</StyledTableData>
 			<StyledTableData><UpdateUser user={user} onUpdate={onUpdate} /></StyledTableData>
 		</Tr>
 	);
