@@ -26,11 +26,11 @@ function App() {
 
 	async function createUser(user) {
 		const userToCreate = {
-			...user,
-			id: users.length + 1
+			...user
 		};
-		await UsersService.createUser(userToCreate);
-		userToCreate.dob = Utils.convertToDate(userToCreate.dob);
+		const newUser = await UsersService.createUser(userToCreate);
+		userToCreate.id = newUser.id;
+		userToCreate.dob = Utils.convertToDate(newUser.dob);
 		setUsers([
 			...users,
 			userToCreate
