@@ -66,8 +66,6 @@ const DisplayErrorMsg = styled.p`
 	color: red;
 `;
 
-Modal.setAppElement('#root');
-
 const CreateUser = ({ onCreate }) => {
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
@@ -138,7 +136,8 @@ const CreateUser = ({ onCreate }) => {
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
 				style={customStyles}
-				contentLabel="Example Modal"
+				contentLabel="Modal"
+				ariaHideApp={false}
 			>
 				<Form onSubmit={handleCreate}>
 					<CloseButton onClick={closeModal}>X</CloseButton>
