@@ -6,7 +6,7 @@ import UsersContainer from './containers/UsersContainer';
 function App() {
 	return (
 		<div>
-			<UsersContainer />
+			<UsersContainer title='app' />
 		</div>
 	);
 }
