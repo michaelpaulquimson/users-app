@@ -123,7 +123,8 @@ const UpdateUser = ({ user, onUpdate }) => {
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
 				style={customStyles}
-				contentLabel="Example Modal"
+				contentLabel="Modal"
+				ariaHideApp={false}
 			>
 				<Form onSubmit={handleUpdate}>
 					<CloseButton onClick={closeModal}>X</CloseButton>
