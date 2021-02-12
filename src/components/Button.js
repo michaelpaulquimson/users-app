@@ -15,7 +15,7 @@ const StyledButton = styled.button`
 
 const Button = ({ type, name }) => {
 	return (
-		<StyledButton type={type}>{name}</StyledButton>
+		<StyledButton title='styled-button' type={type}>{name}</StyledButton>
 	);
 };
 
