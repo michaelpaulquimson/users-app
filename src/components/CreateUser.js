@@ -130,7 +130,7 @@ const CreateUser = ({ onCreate }) => {
 	return (
 		<>
 			<Container>
-				<CreateUserButton onClick={openModal}>Create User</CreateUserButton>
+				<CreateUserButton id='create-user-button' onClick={openModal}>Create User</CreateUserButton>
 			</Container>
 			<Modal
 				isOpen={modalIsOpen}
@@ -140,12 +140,13 @@ const CreateUser = ({ onCreate }) => {
 				ariaHideApp={false}
 			>
 				<Form onSubmit={handleCreate}>
-					<CloseButton onClick={closeModal}>X</CloseButton>
-					<h1>Create User</h1>
-					<FormInput name='firstName' value={firstName} placeholder='Firstname' type={'text'} onChange={(e) => setFirstName(e.target.value)} error={errors.firstName} />
-					<FormInput name='lastName' value={lastName} placeholder='Lastname' type={'text'} onChange={(e) => setLastName(e.target.value)} error={errors.lastName} />
-					<FormInput name='email' value={email} placeholder='Email' type={'text'} onChange={(e) => setEmail(e.target.value)} error={errors.email} />
+					<CloseButton id='create-user-close-btn' onClick={closeModal}>X</CloseButton>
+					<h1 id='create-user-header'>Create User</h1>
+					<FormInput name='firstName' id='create-user-form-input-firstName' value={firstName} placeholder='Firstname' type={'text'} onChange={(e) => setFirstName(e.target.value)} error={errors.firstName} />
+					<FormInput name='lastName' id='create-user-form-input-lastName' value={lastName} placeholder='Lastname' type={'text'} onChange={(e) => setLastName(e.target.value)} error={errors.lastName} />
+					<FormInput name='email' id='create-user-form-input-email' value={email} placeholder='Email' type={'text'} onChange={(e) => setEmail(e.target.value)} error={errors.email} />
 					<DatePicker
+						id='create-user-form-input-dob'
 						selected={dob}
 						onChange={date => setDob(date)}
 						monthsShown={1}
@@ -154,8 +155,8 @@ const CreateUser = ({ onCreate }) => {
 						minDate={subYears(new Date(), 150)}
 						maxDate={subDays(new Date(), 1)}
 					/>
-					{errors.dob && <DisplayErrorMsg>{errors.dob}</DisplayErrorMsg>}
-					<Button type='submit' name='Create User' />
+					{errors.dob && <DisplayErrorMsg id='create-user-form-input-dob-error-msg'>{errors.dob}</DisplayErrorMsg>}
+					<Button id='create-user-submit-btn' type='submit' name='Create User' />
 				</Form>
 			</Modal>
 		</>

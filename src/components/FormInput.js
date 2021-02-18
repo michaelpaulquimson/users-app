@@ -14,18 +14,19 @@ const DisplayErrorMsg = styled.p`
 	color: red;
 `;
 
-const FormInput = ({ type, name, value, placeholder, onChange, error }) => {
+const FormInput = ({ id, type, name, value, placeholder, onChange, error }) => {
 	const [inputType] = useState(type);
 
 	return (
 		<>
-			<Input type={inputType} value={value} name={name} placeholder={placeholder} onChange={onChange} className='inputclass'/>
-			{error && <DisplayErrorMsg>{error}</DisplayErrorMsg>}
+			<Input id={id} type={inputType} value={value} name={name} placeholder={placeholder} onChange={onChange} className='inputclass'/>
+			{error && <DisplayErrorMsg id={`${id}-error-msg`}>{error}</DisplayErrorMsg>}
 		</>
 	);
 };
 
 FormInput.propTypes = {
+	id: PropTypes.string.isRequired,
 	type: PropTypes.string.isRequired,
 	name: PropTypes.string.isRequired,
 	value: PropTypes.string.isRequired,
