@@ -118,7 +118,7 @@ const UpdateUser = ({ user, onUpdate }) => {
 
 	return (
 		<>
-			<div onClick={openModal}>Update User</div>
+			<div id='update-user-button' onClick={openModal}>Update User</div>
 			<Modal
 				isOpen={modalIsOpen}
 				onRequestClose={closeModal}
@@ -127,13 +127,14 @@ const UpdateUser = ({ user, onUpdate }) => {
 				ariaHideApp={false}
 			>
 				<Form onSubmit={handleUpdate}>
-					<CloseButton onClick={closeModal}>X</CloseButton>
-					<h1>Update User</h1>
+					<CloseButton id='update-user-close-btn' onClick={closeModal}>X</CloseButton>
+					<h1 id='update-user-header'>Update User</h1>
 					<input style={{ visibility: 'hidden' }} name='id' placeholder='id' type={'text'}  onChange={(e) => { setId(e.target.value); }} value={id} />
-					<FormInput name='firstName' placeholder='Firstname' type={'text'} onChange={(e) => { setFirstName(e.target.value); }} value={firstName} error={errors.firstName} />
-					<FormInput name='lastName' placeholder='Lastname' type={'text'} onChange={(e) => { setLastName(e.target.value); }} value={lastName} error={errors.lastName} />
-					<FormInput name='email' placeholder='Email' type={'email'} onChange={(e) => { setEmail(e.target.value); }} value={email} error={errors.email} />
+					<FormInput name='firstName' id='update-user-form-input-firstName' placeholder='Firstname' type={'text'} onChange={(e) => { setFirstName(e.target.value); }} value={firstName} error={errors.firstName} />
+					<FormInput name='lastName' id='update-user-form-input-lastName' placeholder='Lastname' type={'text'} onChange={(e) => { setLastName(e.target.value); }} value={lastName} error={errors.lastName} />
+					<FormInput name='email' id='update-user-form-input-email' placeholder='Email' type={'email'} onChange={(e) => { setEmail(e.target.value); }} value={email} error={errors.email} />
 					<DatePicker
+						id='update-user-form-input-dob'
 						selected={dob}
 						onChange={date => setDob(date)}
 						monthsShown={1}
@@ -142,8 +143,8 @@ const UpdateUser = ({ user, onUpdate }) => {
 						minDate={subYears(new Date(), 150)}
 						maxDate={subDays(new Date(), 1)}
 					/>
-					{errors.dob && <DisplayErrorMsg>{errors.dob}</DisplayErrorMsg>}
-					<Button type='submit' name='Update User' />
+					{errors.dob && <DisplayErrorMsg id='update-user-form-input-dob-error-msg'>{errors.dob}</DisplayErrorMsg>}
+					<Button id='update-user-submit-btn' type='submit' name='Update User' />
 				</Form>
 			</Modal>
 		</>
